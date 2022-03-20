@@ -9,9 +9,9 @@ Comic books are consumed widely across all identities, but I wanted to explore h
 
 You can find the R code for analysis in the [comics-analysis](https://github.com/jennacohen/data-viz/tree/main/comics-analysis) and my visualizations here:
 
--[Marvel LGBTQ+ Character Visualization](https://www.datawrapper.de/_/a7eEt/)
+- [Marvel LGBTQ+ Character Visualization](https://www.datawrapper.de/_/a7eEt/)
 
--[DC LGBTQ+ Character Visualization](https://www.datawrapper.de/_/ohfLF/)
+- [DC LGBTQ+ Character Visualization](https://www.datawrapper.de/_/ohfLF/)
 
 ### Paycheck Protection Program (PPP) Loans: Barber Shops
 ###### :computer: R, Tidyverse, Datawrapper
