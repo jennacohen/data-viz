@@ -7,7 +7,7 @@ Here you'll find a collection of data visualizations I've made for class, work, 
 
 Comic books are consumed widely across all identities, but I wanted to explore how characters in these comics reflect their audience. I expected to see little representation of LGBTQ+ characters across both universes. My finding, however, was that there is essentially no representation of LGBTQ+ characters- with over 99% of characters in each universe holding a straight identity. I used the [538 Comic Datasets](https://github.com/fivethirtyeight/data/tree/master/comic-characters) for my analysis.
 
-You can find the R code for analysis in the [comics-analysis](https://github.com/jennacohen/data-viz/tree/main/barber-shop-data) and my visualizations here:
+You can find the R code for analysis in the [comics-analysis](https://github.com/jennacohen/data-viz/tree/main/comics-analysis) and my visualizations here:
 
 -[Marvel LGBTQ+ Character Visualization](https://www.datawrapper.de/_/a7eEt/)
 
