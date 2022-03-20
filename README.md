@@ -20,5 +20,11 @@ You can find the R code for analysis in the kabbage-counties-data folder and the
 
 - [Kabbage Loans Map](https://datawrapper.dwcdn.net/JM1yu/1/)
 
-### Paycheck Protection Program (PPP) Loans: GG Plot Analysis
-###### :computer: R, Tidyverse, Tidycensus, GG Plot
+### Paycheck Protection Program (PPP) Loans: ggplot Analysis
+###### :computer: R, Tidyverse, Tidycensus, ggplot
+
+In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journalism class, we used R and ggplot to create a variety of visuals to better understand our PPP loan data. 
+
+You can find the data in the [gg-plot](https://github.com/jennacohen/data-viz/tree/main/gg-plot) folder and the markdown file containing the ggplot code here:
+
+- [ggplot Analysis](https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd) 
