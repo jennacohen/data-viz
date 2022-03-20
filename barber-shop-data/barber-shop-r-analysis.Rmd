@@ -60,9 +60,8 @@ write_csv(top_ten_undisbursed, "top_ten_states_undisbursed_loans.csv")
 #make bar chart in datawrapper 
 ```
 
-## Comparing percentages of undisbursed loans?
+## Comparing percentages of undisbursed loans
 
-**A2.** 
 [Chart link] (https://datawrapper.dwcdn.net/ktM8h/1/)
 
 This chart differs from the one above because it includes and compares the percentage of undisbursed loans. Including the percentage is essential because, for example, Illinois was #1 in total loans for barber shops and most undisbursed loans. However, it's #9 for percentage of undisbursed loans, pointing out a larger difference in dispersion of loans in several states. 
