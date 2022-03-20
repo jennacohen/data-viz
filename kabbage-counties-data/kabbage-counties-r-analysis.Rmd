@@ -1,0 +1,55 @@
+---
+title: "kabbage-counties-analysis"
+author: "Jenna Cohen"
+date: "11/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**codeblock to load appropriate packages and settings** 
+```{r}
+library(tidyverse)
+library(tigris)
+```
+
+##The online lender Kabbage, Inc. is featured in the [ProPublica PPP fake farms story](https://www.propublica.org/article/ppp-farms). To show where Kabbage was lending money, I made a county-level map that shows the percentage of loans in each county that were Kabbage loans.
+
+[Chart link] (https://datawrapper.dwcdn.net/JM1yu/1/)
+The Kabbage loans are, in general, found more on the east coast. Specifically FL, SC, GA and NJ. On the other hand, CA, NV, ND and NC have 0% Kabbage loans in all of their respective counties. There is no data displayed for DeSoto county, FL. Despite having 4.6% of Kabbage loans, there was no FIPS code matched with their data.
+```{r}
+#load
+kabbage_counties<- read_csv("kabbage_counties.csv")
+all_counties<- read_csv("all_counties.csv")
+
+#join, calc percent
+kabbage_counties_joined<- all_counties %>% 
+  left_join(kabbage_counties, by=c('project_county_name'='project_county_name','project_state'='project_state')) %>% 
+  rename( 
+    kabbage_loans = total.y,
+    all_loans = total.x
+    ) %>% 
+  mutate(
+    percent_kabbage = (kabbage_loans/all_loans)*100
+  )
+#read in county fips
+county_fips<- read_csv("county_fips.csv")
+
+#join with prev df, get rid of zeros
+kabbage_counties_fips <- kabbage_counties_joined %>%
+  left_join(county_fips, by=c('project_county_name'='match_county','project_state'='state')) %>% 
+   mutate(kabbage_loans = case_when(
+    is.na(kabbage_loans) ~ 0,
+    TRUE ~ kabbage_loans
+  )) %>% 
+  mutate( percent_kabbage = case_when(
+    is.na( percent_kabbage) ~ 0,
+    TRUE ~  percent_kabbage
+  ))
+
+#export csv
+write_csv(kabbage_counties_fips, "kabbage_counties_fips.csv")
+
+```

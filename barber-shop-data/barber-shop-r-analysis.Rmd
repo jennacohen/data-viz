@@ -1,0 +1,81 @@
+---
+title: "barber-shop-r-analysis"
+author: "Jenna Cohen"
+date: "11/02/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**codeblock to load appropriate packages and settings** 
+```{r}
+library(tidyverse)
+library(tigris)
+```
+
+## Which state has the most PPP applications from barber shops, and how many of those have undisbursed amounts greater than $0? Which state has the most undisbursed applications?
+
+
+[Chart link] (https://datawrapper.dwcdn.net/dyiuf/1/)
+
+Illinois has the most PPP loans from barber shops, with 11,080 total loan applications. Illinois' undisbursed total is also the state with the most undisbursed loans (which makes sense, proportionally) with 1,713 undisbursed loans to barber shops. 
+
+
+```{r}
+#load data
+barber_shop_ppp<- read_csv("barber_shops_ppp.csv")
+
+#df with total apps per state
+barber_apps_per_state <- barber_shop_ppp %>% 
+  group_by(state) %>% 
+  summarise(
+    loans = n()
+  )
+#df with total apps per state where disbursed is > 0 
+undis_barber_apps_per_state <- barber_shop_ppp %>% 
+  filter(undisbursed_amount > 0) %>% 
+  group_by(state) %>% 
+  summarise(
+    undis_loans = n()
+  )
+#join and rename columns
+# American samoa and Guam have 0 undis loans
+barber_apps_joined<- barber_apps_per_state %>% 
+  left_join(undis_barber_apps_per_state) %>% 
+  mutate(
+    total_loans = loans,
+    total_undisbursed_loans = undis_loans
+  ) %>% 
+  select(state, total_loans, total_undisbursed_loans) 
+
+top_ten_undisbursed<- barber_apps_joined %>% 
+  arrange(desc(total_undisbursed_loans))%>% 
+  head(10)
+
+#export top 10 using write_csv
+write_csv(top_ten_undisbursed, "top_ten_states_undisbursed_loans.csv")
+
+#make bar chart in datawrapper 
+```
+
+## Comparing percentages of undisbursed loans?
+
+**A2.** 
+[Chart link] (https://datawrapper.dwcdn.net/ktM8h/1/)
+
+This chart differs from the one above because it includes and compares the percentage of undisbursed loans. Including the percentage is essential because, for example, Illinois was #1 in total loans for barber shops and most undisbursed loans. However, it's #9 for percentage of undisbursed loans, pointing out a larger difference in dispersion of loans in several states. 
+
+```{r}
+#find percentages of undisbursed loans for top ten states
+barber_apps_percent_undis<- barber_apps_joined %>% 
+  mutate(
+    percent_undisbursed = (total_undisbursed_loans/total_loans)*100
+  ) %>% 
+  arrange(desc(percent_undisbursed)) %>% 
+  head(10)
+
+write_csv(barber_apps_percent_undis, "barber_apps_percent_undisbursed.csv")
+
+```
