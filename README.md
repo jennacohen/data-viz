@@ -8,9 +8,8 @@ In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journali
 
 You can find the R code for analysis in the [barber-shop-data folder](https://github.com/jennacohen/data-viz/tree/main/barber-shop-data) and the visualizations here:
 
-[Undisbursed Barber Shop Loans](https://datawrapper.dwcdn.net/dyiuf/1/)
-
-[Percentages of Undisbused Loans](https://datawrapper.dwcdn.net/ktM8h/1/)
+- [Undisbursed Barber Shop Loans](https://datawrapper.dwcdn.net/dyiuf/1/)
+- [Percentages of Undisbused Loans](https://datawrapper.dwcdn.net/ktM8h/1/)
 
 ### Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
 ###### :computer: R, Tidyverse, Datawrapper
@@ -19,4 +18,4 @@ The online lender Kabbage, Inc. is featured in the [ProPublica PPP fake farms st
 
 You can find the R code for analysis in the kabbage-counties-data folder and the visualization here:
 
-[Kabbage Loans Map] (https://datawrapper.dwcdn.net/JM1yu/1/)
+- [Kabbage Loans Map](https://datawrapper.dwcdn.net/JM1yu/1/)
