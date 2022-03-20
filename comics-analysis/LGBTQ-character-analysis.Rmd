@@ -1,0 +1,150 @@
+---
+title: "LGBTQ-character-r-analysis"
+author: "Jenna Cohen"
+date: "3/20/2022"
+output: html_document
+---
+
+## Core Dataset
+
+I used the [538 Comic Datasets] (https://github.com/fivethirtyeight/data/tree/master/comic-characters) for my analysis.
+
+## Load libraries
+```{r}
+#turn off scientific notation
+options(scipen=999)
+#load tidyverse
+library(tidyverse)
+#load janitor - clean set names
+library(janitor)
+#load lubridate - not sure if we'll need
+library(lubridate)
+#load refinr - not sure if we'll need
+library(refinr)
+#we'll add to these as we need other libs
+```
+
+## Load and Cleaning Data
+
+
+```{r}
+dc<- read_csv("dc_comic_data.csv")
+marvel<- read_csv("marvel_comic_data.csv")
+
+#Get rid of Na's in gsm column so it's easier to filter - Jenna
+dc<- dc %>% 
+  #mutate(
+    #type = "comic",
+    #publisher = "dc"
+  #)
+  select(-page_id, -urlslug) %>% 
+  clean_names() %>% 
+  mutate(gsm = case_when(
+    is.na(gsm) ~ "none",
+    TRUE ~ gsm
+  ))
+
+marvel<- marvel %>% 
+  #mutate(
+    #type = "comic",
+    #publisher = "marvel"
+  #)
+  select(-page_id, -urlslug) %>% 
+  clean_names()%>% 
+  mutate(gsm = case_when(
+    is.na(gsm) ~ "none",
+    TRUE ~ gsm
+  ))
+
+#Should probably mutate to add a column in each that says DC or marvel - then join? -Jenna
+#tried this and it created a list of 112 million rows??? was expecting 22k -jenna 
+#master_list <- marvel %>% 
+  #left_join(dc, by=c('type'))
+#this isn't working either !!! -jenna
+#joined <- rbind(marvel, dc)
+```
+
+A compelling aspect of the data I wanted to explore was how the LGBTQ+ community is represented in comics based on the data. 
+
+Comic books are consumed widely across all identities, but I wanted to explore how characters in these comics reflect their audience. I expected to see little representation of LGBTQ+ characters across both universes. My finding, however, was that there is essentially no representation of LGBTQ+ characters- with over 99% of characters in each universe holding a straight identity.
+
+**[Marvel LGBTQ+ Character Visualization]**(https://www.datawrapper.de/_/a7eEt/)
+
+**[DC LGBTQ+ Character Visualization]**(https://www.datawrapper.de/_/ohfLF/)
+
+
+###### Marvel
+
+```{r}
+#end result: count of total GSM & count of majority characters
+#for each data set, filter for GSM, count & reverse filter for GSM, count
+#also calculate the percentage, dig deeper to see different GSM breakdowns if we were to deem it newsworthy
+
+#gsm characters
+marvel_gsm<- marvel %>% 
+  filter(gsm != "none")
+
+marvel_gsm_breakdown<- marvel_gsm %>% 
+  group_by(gsm) %>% 
+  summarise(
+    gsm_count = n()
+  )
+#non_gsm characters
+marvel_non_gsm<- marvel %>% 
+  filter(gsm == "none")
+
+marvel_non_gsm_breakdown<- marvel_non_gsm %>% 
+  group_by(gsm) %>% 
+  summarise(
+    gsm_count = n()
+  )
+#total marvel characters for percentage purposes
+marvel_characters<- marvel %>% nrow()
+
+marvel_breakdown<- bind_rows(marvel_gsm_breakdown, marvel_non_gsm_breakdown) %>% 
+  mutate(
+    percent_in_universe = (gsm_count/marvel_characters)*100
+  )
+
+write_csv(marvel_breakdown, "marvel_breakdown.csv")
+
+#marvel_gsm_count<- marvel_gsm %>% nrow()
+#marvel_non_gsm_count<- marvel_non_gsm %>% nrow()
+```
+
+Marvel characters are straight 99.5% of the time, based on the marvel data.
+
+###### DC
+```{r}
+#gsm characters
+dc_gsm<- dc %>% 
+  filter(gsm != "none")
+
+dc_gsm_breakdown<- dc_gsm %>% 
+  group_by(gsm) %>% 
+  summarise(
+    gsm_count = n()
+  )
+#non_gsm characters
+dc_non_gsm<- dc %>% 
+  filter(gsm == "none")
+
+dc_non_gsm_breakdown<- dc_non_gsm %>% 
+  group_by(gsm) %>% 
+  summarise(
+    gsm_count = n()
+  )
+#total marvel characters for percentage purposes
+dc_characters<- dc %>% nrow()
+
+dc_breakdown<- bind_rows(dc_gsm_breakdown, dc_non_gsm_breakdown) %>% 
+  mutate(
+    percent_in_universe = (gsm_count/dc_characters)*100
+  )
+
+write_csv(dc_breakdown, "dc_breakdown.csv")
+
+#marvel_gsm_count<- marvel_gsm %>% nrow()
+#marvel_non_gsm_count<- marvel_non_gsm %>% nrow()
+```
+DC characters are straight 99.1% of the time, based on the DC data. 
