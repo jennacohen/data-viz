@@ -19,3 +19,6 @@ The online lender Kabbage, Inc. is featured in the [ProPublica PPP fake farms st
 You can find the R code for analysis in the kabbage-counties-data folder and the visualization here:
 
 - [Kabbage Loans Map](https://datawrapper.dwcdn.net/JM1yu/1/)
+
+### Paycheck Protection Program (PPP) Loans: GG Plot Analysis
+###### :computer: R, Tidyverse, Tidycensus, GG Plot

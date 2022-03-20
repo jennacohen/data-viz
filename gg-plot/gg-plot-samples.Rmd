@@ -1,0 +1,109 @@
+---
+title: "gg-plot-samples"
+author: "Jenna Cohen"
+date: "10/20/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load libraries and establish settings
+```{r}
+library(tidyverse)
+```
+
+## Which day in April 2020 saw the most loans approved in West Virginia? 
+### April 28, 2020.
+
+```{r}
+#~/Documents/GitHub/data_journalism_2021_fall/labs/lab_09/
+wv_ppp_loans<- read_rds("~/Documents/GitHub/data-viz/gg-plot/lab_09.rds")
+
+wv_loans_approved_april <- wv_ppp_loans %>%
+  filter(stringr::str_detect(date_approved, '2020-04')) %>% 
+  group_by(date_approved) %>% 
+  summarise(
+    total_loans=n()
+  )
+
+wv_loans_approved_april %>%
+  ggplot() + 
+  geom_line(aes(x=date_approved, y=total_loans))+
+  scale_x_date(date_breaks = "1 day")+
+  theme(
+    axis.text.x = element_text(angle = 45,  hjust=1)
+  )+
+  labs(
+    title="Loans Approved by Date in April 2020",
+    x = "Date Approved",
+    y = "Total Loans",
+    caption = "Source: SBA PPP loan database"
+  ) +
+  geom_point(aes(x=date_approved, y=total_loans))+
+  geom_text(aes(x=date_approved, y=total_loans, label=total_loans))
+
+```
+
+## What are the top 10 states that got the most PPP loans per 100,000 people?
+```{r}
+total_loans_by_state<- read_csv("state_ppp_all.csv")
+#rename N and S Dakota to properly join
+total_loans_by_state<- total_loans_by_state %>% 
+  mutate(state = case_when(
+    state == "N Dakota" ~ "North Dakota",
+    state == "S Dakota" ~ "South Dakota",
+    #this "replaces" existing data that's spelled correctly with itself
+    TRUE ~ state
+  ))
+library(tidycensus)
+
+acs_2019 <- load_variables(2019, "acs5")
+#variable name B01001_001
+#df with state name and pop from ACS
+state_population<- get_acs(geography = "state",
+              variables = c(state_pop = "B01001_001"),
+              year = 2019) %>% 
+  mutate(state_pop = estimate, state = NAME) %>% 
+  select(state, state_pop)
+#join and find per 100k
+states_pop_loans <- state_population %>% 
+ right_join(total_loans_by_state) %>% 
+  mutate(
+    per_100k = (total_ppp_loans/state_pop)*100000
+  )%>% 
+  arrange(desc(per_100k)) %>%
+  head(10)
+#states_pop_loans
+
+states_pop_loans %>%
+  ggplot() +
+  geom_bar(aes(x=reorder(state,per_100k), weight=per_100k), fill="blue")+
+  theme(
+    axis.text.x = element_text(angle = 45,  hjust=1))+
+    labs(
+    title="States with Highest PPP Loan Approval per 100,000 People",
+    x = "State",
+    y = "Loans Approved (per 100,000)",
+    caption = "Source: SBA PPP loan database and Census ACS Data"
+  ) 
+
+```
+
+## Were there a lot of people who had their loans fully forgiven?  Were there a lot of people who didn't have their loans forgiven? Were there a lot of people who had some of the loan forgiven? 
+#### (scatterplot practice)
+
+```{r}
+below_25k<- wv_ppp_loans %>% 
+  filter(amount <= 25000) %>% 
+  mutate(forgiveness_amount = case_when(
+    is.na(forgiveness_amount) ~ 0,
+    TRUE ~ forgiveness_amount
+  ))
+
+below_25k %>% 
+  ggplot(aes(x=amount, y=forgiveness_amount))+
+  geom_point(size=1)
+#Derek's note: it's best practice to put the aes() on the most granular level of the graph, so in this case that would be: ggplot() + geom_point(aes(x=amount,y=forgiveness_amount)) Your way works, but if you're doing a more complicated graph that has multiple elements you want to make sure that you've got the aesthetics on the proper geometric object.
+```
