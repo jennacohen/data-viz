@@ -6,7 +6,9 @@ Note: All visualizations were made for the purpose of data exploration.
 ### Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
 ###### :computer: R, Tidyverse, Datawrapper
 
-<center><img src="/images/kabbage-map.png" alt="kabbage map" width="400"/></center>
+<a href="https://datawrapper.dwcdn.net/JM1yu/1/">
+<img src="/images/kabbage-map.png" alt="kabbage map" width="400"/>
+</a>
 
 The online lender Kabbage, Inc. is featured in the [ProPublica PPP fake farms story](https://www.propublica.org/article/ppp-farms). To show where Kabbage was lending money, I made a county-level map that shows the percentage of loans in each county that were Kabbage loans.
 
