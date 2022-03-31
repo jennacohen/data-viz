@@ -19,7 +19,7 @@ library(tidyverse)
 
 ```{r}
 #~/Documents/GitHub/data_journalism_2021_fall/labs/lab_09/
-wv_ppp_loans<- read_rds("~/Documents/GitHub/data-viz/gg-plot/lab_09.rds")
+wv_ppp_loans<- read_rds("~/Documents/GitHub/jennacohen/gg-plot/lab_09.rds")
 
 wv_loans_approved_april <- wv_ppp_loans %>%
   filter(stringr::str_detect(date_approved, '2020-04')) %>% 
@@ -41,8 +41,8 @@ wv_loans_approved_april %>%
     y = "Total Loans",
     caption = "Source: SBA PPP loan database"
   ) +
-  geom_point(aes(x=date_approved, y=total_loans))+
-  geom_text(aes(x=date_approved, y=total_loans, label=total_loans))
+  geom_point(aes(x=date_approved, y=total_loans, ))+
+  geom_text(aes(x=date_approved, y=total_loans, label=total_loans, hjust=1.2, vjust=-0.25))
 
 ```
 
