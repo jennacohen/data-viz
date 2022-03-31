@@ -19,6 +19,10 @@ You can find the R code for analysis in the kabbage-counties-data folder and my 
 ### Paycheck Protection Program (PPP) Loans: Barber Shops
 ###### :computer: R, Tidyverse, Datawrapper
 
+<a href="https://datawrapper.dwcdn.net/ktM8h/1/">
+<img src="/images/barber-shop.png" alt="barber shop bar chart" width="400"/>
+</a>
+
 In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis)data journalism class, we used R to analyze [PPP loan data](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data) from a variety of states, counties, and industries. In this case, we were visualizing which states had the largest amount of loan applications to barber shops. 
 
 You can find the R code for analysis in the [barber-shop-data folder](https://github.com/jennacohen/data-viz/tree/main/barber-shop-data) and my visualizations here:
