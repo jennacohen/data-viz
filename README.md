@@ -1,10 +1,10 @@
-# My Data Visualizations
+# Data Visualizations
 Here you'll find a collection of data visualizations I've made for class, work, and personal practice. 
 
 *Note: All visualizations were made for the purpose of data exploration.*
 
 ## Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
-##### :computer: R, Tidyverse, Datawrapper
+##### :computer:🗺 R, Tidyverse, Datawrapper
 
 <a href="https://datawrapper.dwcdn.net/JM1yu/1/">
 <img src="/images/kabbage-map.png" alt="kabbage map" width="400"/>
@@ -17,7 +17,7 @@ You can find the R code for analysis in the kabbage-counties-data folder and my 
 - [Kabbage Loans Map](https://datawrapper.dwcdn.net/JM1yu/1/)
 
 ## Paycheck Protection Program (PPP) Loans: Barber Shops
-##### :computer: R, Tidyverse, Datawrapper
+##### :computer: :bar_chart: R, Tidyverse, Datawrapper
 
 <a href="https://datawrapper.dwcdn.net/ktM8h/1/">
 <img src="/images/barber-shop.png" alt="barber shop bar chart" width="400"/>
@@ -31,7 +31,7 @@ You can find the R code for analysis in the [barber-shop-data folder](https://gi
 - [Percentages of Undisbused Loans](https://datawrapper.dwcdn.net/ktM8h/1/)
 
 ## Paycheck Protection Program (PPP) Loans: ggplot Analysis
-##### :computer: R, Tidyverse, Tidycensus, ggplot
+##### :computer::chart_with_upwards_trend: R, Tidyverse, Tidycensus, ggplot
 
 <a href="https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd">
 <img src="/images/gg-plot-1.png" alt="GG Plot chart 1- loans approved by date" width="400"/>
@@ -48,7 +48,7 @@ You can find the data in the [gg-plot](https://github.com/jennacohen/data-viz/tr
 - [ggplot Analysis](https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd) 
 
 ## DC & Marvel Comic Characters: LGBTQ+ Representation
-##### :computer: R, Tidyverse, Datawrapper
+##### :computer: :bar_chart: R, Tidyverse, Datawrapper
 
 <a href="https://www.datawrapper.de/_/a7eEt/">
 <img src="/images/marvel-chars.png" alt="marvel LGBTQ+ characters bar chart" width="400"/>
