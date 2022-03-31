@@ -4,7 +4,7 @@ Here you'll find a collection of data visualizations I've made for class, work, 
 *Note: All visualizations were made for the purpose of data exploration.*
 
 ## Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
-##### :computer:🗺 R, Tidyverse, Datawrapper
+##### :computer: 🗺 R, Tidyverse, Datawrapper
 
 <a href="https://datawrapper.dwcdn.net/JM1yu/1/">
 <img src="/images/kabbage-map.png" alt="kabbage map" width="400"/>
@@ -31,7 +31,7 @@ You can find the R code for analysis in the [barber-shop-data folder](https://gi
 - [Percentages of Undisbused Loans](https://datawrapper.dwcdn.net/ktM8h/1/)
 
 ## Paycheck Protection Program (PPP) Loans: ggplot Analysis
-##### :computer::chart_with_upwards_trend: R, Tidyverse, Tidycensus, ggplot
+##### :computer::chart_with_upwards_trend::bar_chart: R, Tidyverse, Tidycensus, ggplot
 
 <a href="https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd">
 <img src="/images/gg-plot-1.png" alt="GG Plot chart 1- loans approved by date" width="400"/>
