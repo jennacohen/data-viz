@@ -1,7 +1,7 @@
 # My Data Visualizations
 Here you'll find a collection of data visualizations I've made for class, work, and personal practice. 
 
-Note: All visualizations were made for the purpose of data exploration.
+*Note: All visualizations were made for the purpose of data exploration.*
 
 ### Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
 ###### :computer: R, Tidyverse, Datawrapper
@@ -33,6 +33,10 @@ You can find the R code for analysis in the [barber-shop-data folder](https://gi
 ### DC & Marvel Comic Characters: LGBTQ+ Representation
 ###### :computer: R, Tidyverse, Datawrapper
 
+<a href="https://www.datawrapper.de/_/a7eEt/">
+<img src="/images/marvel-chars.png" alt="marvel LGBTQ+ characters bar chart" width="400"/>
+</a>
+
 Comic books are consumed widely across all identities, but I wanted to explore how characters in these comics reflect their audience. I expected to see little representation of LGBTQ+ characters across both universes. My finding, however, was that there is essentially no representation of LGBTQ+ characters- with over 99% of characters in each universe holding a straight identity. I used the [538 Comic Datasets](https://github.com/fivethirtyeight/data/tree/master/comic-characters) for my analysis.
 
 You can find the R code for analysis in the [comics-analysis](https://github.com/jennacohen/data-viz/tree/main/comics-analysis) and my visualizations here:
@@ -43,6 +47,14 @@ You can find the R code for analysis in the [comics-analysis](https://github.com
 
 ### Paycheck Protection Program (PPP) Loans: ggplot Analysis
 ###### :computer: R, Tidyverse, Tidycensus, ggplot
+
+<a href="https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd">
+<img src="/images/gg-plot-1.png" alt="GG Plot chart 1- loans approved by date" width="400"/>
+</a>
+
+<a href="https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd">
+<img src="/images/gg-plot-2.png" alt="GG Plot chart 2- states with highest ppp loans per capita" width="400"/>
+</a>
 
 In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journalism class, we used R and ggplot to create a variety of visuals to better understand our PPP loan data. 
 
