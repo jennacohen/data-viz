@@ -1,4 +1,4 @@
-# UMD Data Visualizations
+# 🐢 UMD Data Visualizations
 Here you'll find a collection of data visualizations I made during my time at the University of Maryland for class, work, and personal practice. 
 
 *Note: All visualizations were made for the purpose of data exploration.*
