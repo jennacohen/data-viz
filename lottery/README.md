@@ -8,7 +8,7 @@ Data visualizations:
 
 
 <a href="https://cnsmaryland.org/2022/07/01/state-lotteries-transfer-wealth/">
-  <kbd><img src="lottery-ticket-sales.png" alt="State lotteries transfer wealth out of needy communities" width="250px"/></kbd>
+  <kbd><img src="lottery-ticket-sales.png" alt="State lotteries transfer wealth out of needy communities" width="300px"/></kbd>
 </a>
 
 
@@ -16,5 +16,5 @@ Data visualizations:
 
 
 <a href="https://cnsmaryland.org/2022/07/01/scientific-games-lottery-playbook-succeeded-then-spread/">
-  <kbd><img src="lottery-map-gif-v2.gif" alt="Scientific Games’ lottery playbook succeeded, then spread" width="250px"/></kbd>
+  <kbd><img src="lotto-map.png" alt="Scientific Games’ lottery playbook succeeded, then spread" width="300px"/></kbd>
 </a>
