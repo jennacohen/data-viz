@@ -1,9 +1,11 @@
-# 🐢 UMD Data Visualizations
-Here you'll find a collection of data visualizations I made during my time at the University of Maryland for class, work, and personal practice. 
+# 🐢 Paycheck Protection Program: Data Analysis
 
-*Note: All visualizations were made for the purpose of data exploration.*
+Here you'll find a collection of data visualizations I made during my time at the University of Maryland for class, work, and personal practice.
+
+_Note: All visualizations were made for the purpose of data exploration._
 
 ## Paycheck Protection Program (PPP) Loans: Kabbage, Inc. Online Lender
+
 ##### 🗺: R, Tidyverse, Datawrapper
 
 <a href="https://datawrapper.dwcdn.net/JM1yu/1/">
@@ -17,13 +19,14 @@ You can find the R code for analysis in the kabbage-counties-data folder and my 
 - [Kabbage Loans Map](https://datawrapper.dwcdn.net/JM1yu/1/)
 
 ## Paycheck Protection Program (PPP) Loans: Barber Shops
+
 ##### :bar_chart:: R, Tidyverse, Datawrapper
 
 <a href="https://datawrapper.dwcdn.net/ktM8h/1/">
 <img src="/images/barber-shop.png" alt="barber shop bar chart" width="400"/>
 </a>
 
-In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis)data journalism class, we used R to analyze [PPP loan data](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data) from a variety of states, counties, and industries. In this case, we were visualizing which states had the largest amount of loan applications to barber shops. 
+In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis)data journalism class, we used R to analyze [PPP loan data](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data) from a variety of states, counties, and industries. In this case, we were visualizing which states had the largest amount of loan applications to barber shops.
 
 You can find the R code for analysis in the [barber-shop-data folder](https://github.com/jennacohen/data-viz/tree/main/barber-shop-data) and my visualizations here:
 
@@ -31,6 +34,7 @@ You can find the R code for analysis in the [barber-shop-data folder](https://gi
 - [Percentages of Undisbused Loans](https://datawrapper.dwcdn.net/ktM8h/1/)
 
 ## Paycheck Protection Program (PPP) Loans: ggplot Analysis
+
 ##### :chart_with_upwards_trend::bar_chart:: R, Tidyverse, Tidycensus, ggplot
 
 <a href="https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd">
@@ -41,13 +45,16 @@ You can find the R code for analysis in the [barber-shop-data folder](https://gi
 <img src="/images/gg-plot-2.png" alt="GG Plot chart 2- states with highest ppp loans per capita" width="400"/>
 </a>
 
-In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journalism class, we used R and ggplot to create a variety of visuals to better understand our PPP loan data. 
+In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journalism class, we used R and ggplot to create a variety of visuals to better understand our PPP loan data.
 
 You can find the data in the [gg-plot](https://github.com/jennacohen/data-viz/tree/main/gg-plot) folder and my markdown file containing the ggplot code here:
 
-- [ggplot Analysis](https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd) 
+- [ggplot Analysis](https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd)
 
-## DC & Marvel Comic Characters: LGBTQ+ Representation
+## Other data analysis:
+
+### DC & Marvel Comic Characters: LGBTQ+ Representation
+
 ##### :bar_chart:: R, Tidyverse, Datawrapper
 
 <a href="https://www.datawrapper.de/_/a7eEt/">
@@ -61,5 +68,3 @@ You can find the R code for analysis in the [comics-analysis](https://github.com
 - [Marvel LGBTQ+ Character Visualization](https://www.datawrapper.de/_/a7eEt/)
 
 - [DC LGBTQ+ Character Visualization](https://www.datawrapper.de/_/ohfLF/)
-
-
