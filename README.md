@@ -1,6 +1,6 @@
 # 👩🏻‍💻 Paycheck Protection Program: Data Analysis
 
-The Paycheck Protection Program distributed SBA-backed loans that supported businesses and their workforces during COVID-19. Working with the federal data, I conducted analysis and produced visualizations for work, school, and personal practice. I worked in R, cleaned data, and used various tools to craft visualizations.
+The [Paycheck Protection Program](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program) distributed SBA-backed loans that supported businesses and their workforces during COVID-19. Working with the federal [data](https://www.sba.gov/funding-programs/loans/covid-19-relief-options/paycheck-protection-program/ppp-data), I conducted analysis and produced visualizations for work, school, and personal practice. I worked in R, cleaned data, and used various tools to craft visualizations.
 
 _Note: All visualizations were made for the purpose of data exploration._
 
