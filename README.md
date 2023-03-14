@@ -1,4 +1,4 @@
-# 🐢 Paycheck Protection Program: Data Analysis
+# 👩🏻‍💻 Paycheck Protection Program: Data Analysis
 
 Here you'll find a collection of data visualizations I made during my time at the University of Maryland for class, work, and personal practice.
 
