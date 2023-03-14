@@ -1,6 +1,6 @@
 # 👩🏻‍💻 Paycheck Protection Program: Data Analysis
 
-Here you'll find a collection of data visualizations I made during my time at the University of Maryland for class, work, and personal practice.
+The Paycheck Protection Program distributed SBA-backed loans that supported businesses and their workforces during COVID-19. Working with the federal data, I conducted analysis and produced visualizations for work, school, and personal practice. I worked in R, cleaned data, and used various tools to craft visualizations.
 
 _Note: All visualizations were made for the purpose of data exploration._
 
@@ -50,21 +50,3 @@ In [Derek Willis'](https://merrill.umd.edu/directory/derek-willis) data journali
 You can find the data in the [gg-plot](https://github.com/jennacohen/data-viz/tree/main/gg-plot) folder and my markdown file containing the ggplot code here:
 
 - [ggplot Analysis](https://github.com/jennacohen/data-viz/blob/main/gg-plot/gg-plot-samples.Rmd)
-
-## Other data analysis:
-
-### DC & Marvel Comic Characters: LGBTQ+ Representation
-
-##### :bar_chart:: R, Tidyverse, Datawrapper
-
-<a href="https://www.datawrapper.de/_/a7eEt/">
-<img src="/images/marvel-chars.png" alt="marvel LGBTQ+ characters bar chart" width="400"/>
-</a>
-
-Comic books are consumed widely across all identities, but I wanted to explore how characters in these comics reflect their audience. I expected to see little representation of LGBTQ+ characters across both universes. My finding, however, was that there is essentially no representation of LGBTQ+ characters- with over 99% of characters in each universe holding a straight identity. I used the [538 Comic Datasets](https://github.com/fivethirtyeight/data/tree/master/comic-characters) for my analysis.
-
-You can find the R code for analysis in the [comics-analysis](https://github.com/jennacohen/data-viz/tree/main/comics-analysis) and my visualizations here:
-
-- [Marvel LGBTQ+ Character Visualization](https://www.datawrapper.de/_/a7eEt/)
-
-- [DC LGBTQ+ Character Visualization](https://www.datawrapper.de/_/ohfLF/)
